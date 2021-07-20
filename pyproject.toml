@@ -1,0 +1,35 @@
+[build-system]
+build-backend = 'trampolim'
+requires = ['trampolim']
+
+[project]
+name = 'python-nest'
+version = '0.0.0'
+description = 'Automated Python binary artifact building service'
+readme = 'README.md'
+requires-python = '>=3.7'
+license = { file = 'LICENSE' }
+keywords = ['build', 'wheel', 'artifact', 'binary']
+authors = [
+  { name = 'Filipe Laíns', email = 'lains@riseup.net' },
+]
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Programming Language :: Python',
+]
+
+[project.optional-dependencies]
+test = [
+  'pytest',
+  'pytest-cov',
+]
+docs = [
+  'furo>=2021.04.11b34',
+  'sphinx~=3.0',
+]
+
+[project.urls]
+homepage = 'https://github.com/FFY00/python-nest'
+repository = 'https://github.com/FFY00/python-nest'
+documentation = 'https://nest.readthedocs.io'
+changelog = 'https://nest.readthedocs.io/en/latest/changelog.html'
