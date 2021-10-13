@@ -18,6 +18,11 @@ classifiers = [
   'Programming Language :: Python',
 ]
 
+dependencies = [
+  'starlette >= 0.16.0',
+  'mako >= 1.1.0',
+]
+
 [project.optional-dependencies]
 test = [
   'pytest',
