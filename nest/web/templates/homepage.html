@@ -7,13 +7,16 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-dark" href="${url}/login">Login</a>
+            % if auth:
+            <a class="button is-dark" href="${url}/-/logout">Logout</a>
+            % else:
+            <a class="button is-dark" href="${login_url}">Login</a>
+            % endif
           </div>
         </div>
       </div>
     </div>
   </nav>
-
 
   <div class="hero-body">
     <div class="container has-text-centered">

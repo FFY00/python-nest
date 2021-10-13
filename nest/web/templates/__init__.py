@@ -23,6 +23,10 @@ def render(template, **render_params) -> str:
                 f'{template}.html'
             ).render(
                 url=nest.web.WEBSITE_URL,
+                login_url='https://github.com/login/oauth/authorize?scope={}&client_id={}'.format(
+                    nest.web.asgi.authenticated_app.oauth_scope(),
+                    nest.web.GITHUB_CLIENT_ID,
+                ),
                 **render_params,
             ),
         )

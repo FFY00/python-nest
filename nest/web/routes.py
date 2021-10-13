@@ -4,4 +4,7 @@ import nest.web.templates
 
 
 async def homepage(request):
-    return nest.web.templates.render('homepage')
+    return nest.web.templates.render(
+        'homepage',
+        auth=request.scope['auth'],
+    )
